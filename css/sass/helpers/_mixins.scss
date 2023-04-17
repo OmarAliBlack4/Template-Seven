@@ -1,0 +1,32 @@
+// media queries
+@mixin media-small{
+    @media #{$small-screen} {
+        @content;
+    }
+}
+@mixin media-medium{
+    @media #{$medium-screen} {
+        @content;
+    }
+}
+@mixin media-large{
+    @media #{$large-screen} {
+        @content;
+    }
+}
+
+// Overlay
+@mixin overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// anmiation mixin
+@mixin keyFr($name-anmition){
+    @keyframes #{$name-anmition} {
+        @content;
+    }
+}

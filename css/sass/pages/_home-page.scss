@@ -1,0 +1,144 @@
+// start slider
+.slider{
+    padding: 50px 0;
+    text-align: center;
+    blockquote{
+        width: 80%;
+        margin: auto;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 1.7;
+        color: $secound-color;
+    }
+    img{
+        max-width: 100%;
+        margin: 20px 0;
+    }
+    .bollets{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li{
+            width: 15px;
+            height: 15px;
+            border: 3px solid $secound-color; 
+            border-radius: 50%;
+            margin: 0 3px;
+            cursor: pointer;
+            transition: .2s;
+            &.active,
+            &:hover{
+                background-color: $secound-color;
+            }
+        }
+    }
+}
+// serveses
+.servese{
+    .boxes{
+        display: flex;
+        gap: 30px;
+        @media #{$mobile-media} {
+            flex-direction: column;
+        }
+        .box{
+            .title{
+                display: flex;
+                align-items: center;
+                gap: 15px;
+                svg{
+                    font-size: 25px;
+                    color: #292929;
+                }
+                h4{
+                    font-size: 20px;
+                    color: #292929;
+                }
+            }
+            p{
+                line-height: 1.4;
+                color: $secound-color;
+                margin: 20px 0;
+            }
+            a{
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+    }
+}
+// players
+.players{
+    padding-bottom: 40px;
+    .boxes{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+        gap: 20px;
+        .box{
+            box-shadow: 8px 11px 28px 0px #00000045;
+            text-align: center;
+            padding: 6px;
+            border-radius: 10px;
+            transition: .2s;
+            position: relative;
+            &:hover{
+                transform: translatey(-10px);
+            }
+            &::after{
+                content: "Admin";
+                position: absolute;
+                top: 7px;
+                left: -22px;
+                width: 100px;
+                height: 35px;
+                background-color: #e2494c;
+                display: flex;
+                align-items: center;
+                color: white;
+                justify-content: center;
+                transform: rotate(-40deg);
+                border-top-right-radius: 30px;
+                border-top-left-radius: 30px;
+            }
+            img{
+                max-width: 100%;
+                border-radius: 10px;
+            }
+            h4{
+                padding: 10px 0;
+                color: $secound-color;
+                span{
+                    color: black;
+                }
+            }
+            p{
+                line-height: 1.3;
+                color: #9c9c9c;
+                padding: 0 0 10px 0;
+            }
+            a{
+                color: $main-color;
+                font-weight: bold;
+            }
+        }
+    }
+}
+// lorem
+.lorem{
+    padding: 0 0 40px 0;
+    .boxes{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        @media #{$mobile-media} {
+            flex-direction: column;
+        }
+        .box{
+            overflow: hidden;
+            border-radius: 20px;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}

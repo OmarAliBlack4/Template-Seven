@@ -1,0 +1,15 @@
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+    position: relative;
+    @include media-small{
+        width: 750px;
+    }    
+    @include media-medium{
+        width: 970px;
+    }    
+    @include media-large{
+        width: 1170px;
+    }
+}
